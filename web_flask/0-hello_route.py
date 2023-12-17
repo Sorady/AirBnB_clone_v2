@@ -5,8 +5,8 @@ Your web application must be listening on 0.0.0.0, port 5000
 from flask import Flask
 app = Flask(__name__)
 
-
-@app.route('/airbnb-onepage', strict_slashes=False)
+# Define the route for the root URL '/'
+@app.route('/airbnb-onepage/', strict_slashes=False)
 def hello_world():
     """
     Message to display in the browser
