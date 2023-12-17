@@ -2,10 +2,10 @@
 """
 Your web application must be listening on 0.0.0.0, port 5000
 """
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, render_template
 
-# Define the route for the root URL '/'
+app = Flask("__name__")
+
 @app.route('/airbnb-onepage/', strict_slashes=False)
 def hello_world():
     """
@@ -14,4 +14,4 @@ def hello_world():
     return 'Hello HBNB!'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=None)
